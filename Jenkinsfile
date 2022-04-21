@@ -18,7 +18,7 @@ pipelineJob('CD_VIEW') {
             scm {
                 git {
                     remote {
-                        github('jenkinsci/pipeline-examples')
+                        url(git@github.com:cloudbees-workshop87/pipeline-examples.git)
                     }
                 }
             }
