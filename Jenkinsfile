@@ -1,3 +1,5 @@
+import javaposse.jobdsl.dsl.DslFactory
+
 pipeline {
     
     agent any
