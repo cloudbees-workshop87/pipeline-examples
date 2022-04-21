@@ -8,9 +8,9 @@ pipeline {
                 publishEvent simpleEvent('helloWorld')
             }
         }
-    }
-}
+   
 
+        stage('Deploy'){
 pipelineJob('CD_VIEW') {
     definition {
         cpsScm {
@@ -25,3 +25,5 @@ pipelineJob('CD_VIEW') {
         }
     }
 }
+        }
+} }
