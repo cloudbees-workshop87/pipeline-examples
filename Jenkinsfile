@@ -1,4 +1,5 @@
 pipeline {
+    def repo = 'https://github.com/cloudbees-workshop87/pipeline-examples.git'
     agent any
 
     stages {
@@ -18,7 +19,7 @@ pipelineJob('CD_VIEW') {
             scm {
                 git {
                     remote {
-                        url(git@github.com:cloudbees-workshop87/pipeline-examples.git)
+                        url(repo)
                     }
                 }
             }
