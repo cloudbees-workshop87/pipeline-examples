@@ -1,5 +1,5 @@
 pipeline {
-    def repo = 'https://github.com/cloudbees-workshop87/pipeline-examples.git'
+    
     agent any
 
     stages {
@@ -14,6 +14,7 @@ pipeline {
         stage('Deploy'){
             steps{
 pipelineJob('CD_VIEW') {
+    def repo = 'https://github.com/cloudbees-workshop87/pipeline-examples.git'
     definition {
         cpsScm {
             scm {
