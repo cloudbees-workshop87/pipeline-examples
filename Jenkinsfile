@@ -14,13 +14,13 @@ pipeline {
         stage('Deploy'){
             steps{
 pipelineJob('CD_VIEW') {
-    def repo = 'https://github.com/cloudbees-workshop87/pipeline-examples.git'
+ 
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url(repo)
+                        url(https://github.com/cloudbees-workshop87/pipeline-examples.git)
                     }
                 }
             }
