@@ -18,11 +18,7 @@ pipelineJob('CD_VIEW') {
     definition {
         cpsScm {
             scm {
-                git {
-                    remote {
-                        url(https://github.com/cloudbees-workshop87/pipeline-examples.git)
-                    }
-                }
+                github('cloudbees-workshop87/pipeline-examples')
             }
             scriptPath('declarative-examples/simple-examples/environmentInStage.groovy')
         }
