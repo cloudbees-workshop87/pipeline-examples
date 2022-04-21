@@ -11,6 +11,7 @@ pipeline {
    
 
         stage('Deploy'){
+            steps{
 pipelineJob('CD_VIEW') {
     definition {
         cpsScm {
@@ -25,5 +26,5 @@ pipelineJob('CD_VIEW') {
         }
     }
 }
-        }
+            } }
 } }
