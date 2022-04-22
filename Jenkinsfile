@@ -15,17 +15,19 @@ pipeline {
 
         stage('Deploy'){
             steps{
-job {
-        name "CD_VIEW"
+                pipelineJob()
+
+            } }
+} }
+
+def pipelineJob() {
  
-    //definition {
-        //cpsScm {
+    definition {
+        cpsScm {
             scm {
                 github('cloudbees-workshop87/pipeline-examples')
             }
             scriptPath('declarative-examples/simple-examples/environmentInStage.groovy')
-//        }
-  //  }
+        }
+    }
 }
-            } }
-} }
